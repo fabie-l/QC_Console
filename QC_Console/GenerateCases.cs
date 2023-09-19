@@ -15,6 +15,8 @@ namespace QC_Console
         const int count = 100;
         private int id;
 
+
+
         public GenerateCases(string db, string startId, string owner)
         {
             _db = db;
