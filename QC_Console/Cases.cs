@@ -9,12 +9,12 @@ namespace QC_Console
 {
     public class Cases
     {
-        private int _id;
+        private long _id;
         private readonly string _owner;
         private const string tableName = "cases";
         private readonly string db = Directory.GetCurrentDirectory() + "\\copy\\data.qda";
 
-        public Cases (int id, string owner)
+        public Cases (long id, string owner)
         {
             _id = id;
             _owner = owner;
@@ -56,7 +56,7 @@ namespace QC_Console
             try
             {
                 CSQLite.InsertData(connection, insertQuery);
-                _id++;
+                _id += 10000;
             }
             catch (Exception ex)
             {
