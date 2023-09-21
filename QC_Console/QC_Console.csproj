@@ -8,11 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="IronPdf" Version="2023.9.8" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="copy\data.qda">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="documents\dummy.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="original\data.qda">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

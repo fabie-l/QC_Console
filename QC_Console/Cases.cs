@@ -56,7 +56,7 @@ namespace QC_Console
             try
             {
                 CSQLite.InsertData(connection, insertQuery);
-                _id += 10000;
+                _id += 100000000000000;
             }
             catch (Exception ex)
             {
